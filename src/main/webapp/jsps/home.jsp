@@ -46,7 +46,7 @@
 <body>
 
 <header>
-    <h1> Welcome to KK DEVOPS AWS Portal next demo starts on Aprip 15 20226</h1>
+    <h1> Welcome to KK DEVOPS AWS Portal next demo starts on Aprip 15 2026</h1>
     <h3>Training | Development | Consulting</h3>
 </header>
 
