@@ -46,7 +46,7 @@
 <body>
 
 <header>
-    <h1> Welcome to KK DEVOPS AWS Portal next demo starts on April 15 2026 at 10:30 AM and regular classes starts 19th Apr,2026</h1>
+    <h1> Welcome to KK DEVOPS AWS Portal </h1>
     <h3>Training | Development | Consulting</h3>
 </header>
 
