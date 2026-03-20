@@ -46,7 +46,7 @@
 <body>
 
 <header>
-    <h1> Welcome to KK DEVOPS AWS Portal and DevSecops </h1>
+    <h1> Welcome to KK DEVOPS AWS Portal and DevSecops classes </h1>
     <h3>Training | Development | Consulting</h3>
 </header>
 
