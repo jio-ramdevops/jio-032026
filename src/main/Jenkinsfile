@@ -1,0 +1,31 @@
+node
+{
+def mavenHome = tool name:'maven-3.9.9'
+stage('git checkout')
+{
+git branch: 'dev1', url: 'https://github.com/jio-ramdevops/jio-032026.git'
+}
+stage('maven build')
+{
+sh "${mavenHome}/bin/mvn clean package"
+}
+stage('SonarQube Report')
+{
+sh "${mavenHome}/bin/mvn sonar:sonar"
+}
+stage('Nexus Report')
+{
+sh "${mavenHome}/bin/mvn clean deploy"
+}
+stage('Deploy to Tomcat') 
+{
+    echo "Deploying WAR file using curl..."
+
+    sh """
+        curl -u sai:password \
+        --upload-file /var/lib/jenkins/workspace/target-dev-scriptedPL/target/maven-web-application.war \
+        "http://3.110.148.111:8080/manager/text/deploy?path=/maven-web-application&update=true"
+    """
+}
+
+}
