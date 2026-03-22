@@ -50,7 +50,7 @@ catch (e) {
   }
   
 }
-def notifyBuild(string buildStatus='STARTED'){
+def notifyBuild(String buildStatus='STARTED'){
 buildStatus= buildStatus?: SUCCESS
 def subject = "${buildStatus}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'"
 def summary = "${subject} (${env.BUILD_URL})"
